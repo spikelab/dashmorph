@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script type="text/javascript" src="/js/jquery-1.4.2.js"></script>
+        <script type="text/javascript" src="/js/jquery-ui-1.8.2.custom.js"></script>
+        <script type="text/javascript" src="/js/ecma-5.js"></script>
+        <script type="text/javascript" src="/js/futures.js"></script>
+        <script type="text/javascript" src="/js/jquery.srender.js"></script>
+        <script type="text/javascript" src="/js/index.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="/css/ui-lightness/jquery-ui-1.8.2.custom.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/index.css"/>
+    </head>
+    <body>
+        <script type="text/html" id="template-dashmorph-menu">
+        <: $.each(items, function(idx, item) { :>
+            <h3><a href="#"><:=item.label:></a></h3>
+            <div id="menu-item-<:=idx:>"></div>
+        <: }); :>
+        </script>
+        <script type="text/html" id="template-dashmorph-menu-link-list">
+        <ul>
+        <: $.each(options.items, function(idx, item) { :>
+            <li><a href="<:=item.href:>"><:=item.label:></a></li>
+        <: }); :>
+        </ul>
+        </script>
+        <script type="text/html" id="template-dashmorph-menu-widget-list">
+        <: $.each(widgets, function(idx, widget) { :>
+            <div id="widget-list-<:=widget.name:>" class="widget-button">
+                <a href="#">
+                    <img src="/img/widgets/<:=widget.icon:>"/><br/>
+                    <:=widget.label:>
+                </a>
+            </div>
+        <: }); :>
+        </script>
+        <script type="text/html" id="template-dashmorph-tabs">
+        <ul>
+        <: $.each(tabs, function(idx, tab) { :>
+            <li><a href="#tabs-<:=tab.id:>"><:=tab.label:></a></li>
+        <: }); :>
+        </ul>
+        <: $.each(tabs, function(idx, tab) { :>
+        <div id="tabs-<:=tab.id:>">
+            <div id="tabs-<:=tab.id:>-body" class="tab-inner">
+            </div>
+        </div>
+        <: }); :>
+        </script>
+
+        <div id="body">
+            <div id="body-left">
+            </div>
+            <div id="body-center">
+            </div>
+        </div>
+    </body>
+</html>

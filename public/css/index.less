@@ -1,0 +1,119 @@
+.rounded-corners (@radius: 5px) {
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+    border-radius: @radius;
+}       
+        
+.gradient-bg {
+    background-image: -moz-linear-gradient(top, #c5c5e5 0%, #cce 50%, #99b 100%);
+}       
+        
+.box_shadow (@val: 0 2px 5px #777) {
+     -moz-box-shadow: @val; /* FF3.5+ */
+  -webkit-box-shadow: @val; /* Saf3.0+, Chrome */
+          box-shadow: @val; /* Opera 10.5, IE 9.0 */
+}       
+
+
+#pane-left {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 195px;
+    bottom: 0px;
+    border: 1px solid green;
+}
+
+#pane-center { 
+    position: absolute;
+    left: 200px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 1px solid red;
+}
+
+ul.tabs { 
+    padding: 0;
+    margin: 0;
+}
+
+li.tab { 
+    .gradient-bg;
+    display: inline;
+    border: 1px solid blue;
+}
+
+div.tab-body-holder {
+    border: 1px solid orange;
+    top: 30px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+}
+
+div.tab-body { 
+    border: 1px solid grey;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+div.accordion-header { 
+    .gradient-bg;
+}
+
+body {
+    font-size: 10px;
+}
+
+div {
+    padding: 0;
+    margin: 0;
+}
+
+#body { 
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 2px;
+}
+
+#body-left { 
+    top: 0;
+    width: 200px;
+    bottom: 0;
+    left: 0;
+}
+
+#body-center { 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 200px;
+    border: 1px solid green;
+}
+
+div.tab-inner {
+    bottom:5px;
+    left:5px;
+    overflow:auto;
+    position:absolute;
+    right:5px;
+    top:36px;
+}
+
+img { border: 0; }
+
+div.widget-button { 
+    .rounded-corners;
+    border: 1px solid grey;
+    padding: 4px;
+    text-align: center;
+    display: inline-block;
+}

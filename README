@@ -1,0 +1,3 @@
+ * install [connect](http://github.com/senchalabs/connect/)
+ * install [spark](http://github.com/senchalabs/spark)
+ * run spark in this directory
